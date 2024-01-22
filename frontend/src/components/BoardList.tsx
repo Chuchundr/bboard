@@ -64,7 +64,7 @@ function BoardList() {
                     size="small"
                     onClick={handleGroup_by_topic}
                   >
-                    Group By Topic
+                    Группировать по теме
                   </Button>
                 ) : (
                   <Button
@@ -78,7 +78,7 @@ function BoardList() {
                     size="small"
                     onClick={handleGroup_by_topic}
                   >
-                    Group By Topic
+                    Группировать по теме
                   </Button>
                 )}
                 <BoardForm />

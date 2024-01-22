@@ -62,7 +62,7 @@ function Profile() {
               markdown={post.message}
             />
             <p style={{ textAlign: "left", color: "gray" }}>
-              <b>Posted:</b> <TimeAgo date={post.created_at} />
+              <b>Добавлено:</b> <TimeAgo date={post.created_at} />
             </p>
           </Grid>
         </Grid>
@@ -106,7 +106,7 @@ function Profile() {
     else
       return (
         <Typography color="inherit" justifyContent="center" display="flex">
-          No Posts Found
+          Постов нет
         </Typography>
       );
   }
@@ -143,7 +143,7 @@ function Profile() {
               display="flex"
               variant="h4"
             >
-              {"Name: " + ProfileStore.getProfile().first_name}{" "}
+              {"Имя: " + ProfileStore.getProfile().first_name}{" "}
               {ProfileStore.getProfile().last_name}
             </Typography>
             <Typography
@@ -152,7 +152,7 @@ function Profile() {
               display="flex"
               variant="h5"
             >
-              {"Username: " + ProfileStore.getProfile().username}
+              {"Имя пользователя: " + ProfileStore.getProfile().username}
             </Typography>
             {ProfileStore.getProfile().is_administrator ? (
               <Typography
@@ -179,7 +179,7 @@ function Profile() {
               display="flex"
               variant="h5"
             >
-              {"Gender: " + ProfileStore.getProfile().gender}
+              {"Пол: " + ProfileStore.getProfile().gender}
             </Typography>
             <Typography
               color="inherit"
@@ -187,7 +187,7 @@ function Profile() {
               display="flex"
               variant="h5"
             >
-              {"About: " + ProfileStore.getProfile().about}
+              {"Информация: " + ProfileStore.getProfile().about}
             </Typography>
             <Typography
               color="inherit"
@@ -195,8 +195,6 @@ function Profile() {
               display="flex"
               variant="h5"
             >
-              <i>Hometown: </i>
-              <b>{ProfileStore.getProfile().hometown}</b>
             </Typography>
             <Typography
               color="inherit"
@@ -204,8 +202,6 @@ function Profile() {
               display="flex"
               variant="h5"
             >
-              <i>Present Location: </i>
-              <b>{ProfileStore.getProfile().present_location}</b>
             </Typography>
             <Typography
               color="inherit"
@@ -213,12 +209,6 @@ function Profile() {
               display="flex"
               variant="h5"
             >
-              <i>Website: </i>
-              <b>
-                <a href={"//" + ProfileStore.getProfile().website}>
-                  {ProfileStore.getProfile().website}
-                </a>
-              </b>
             </Typography>
             <Typography
               color="inherit"
@@ -226,8 +216,6 @@ function Profile() {
               display="flex"
               variant="h5"
             >
-              <i>Interests: </i>
-              <b>{ProfileStore.getProfile().interests}</b>
             </Typography>
             {ProfileStore.getProfile().is_banned ? (
               <Typography

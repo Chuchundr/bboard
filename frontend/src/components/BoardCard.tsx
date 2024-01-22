@@ -44,11 +44,11 @@ function BoardCard({ board }: { board: Board }) {
           <Typography color="inherit">{board.description}</Typography>
           <hr />
           <Typography color="inherit">
-            <b>Threads: </b>
+            <b>Треды: </b>
             {board.threads_count}
           </Typography>
           <Typography color="inherit">
-            <b>Posts: </b>
+            <b>Посты: </b>
             {board.posts_count}
           </Typography>
         </React.Fragment>

@@ -53,7 +53,7 @@ function LoginForm() {
       >
         <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}></Avatar>
         <Typography component="h1" variant="h5">
-          Login
+          Войти
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
@@ -71,7 +71,7 @@ function LoginForm() {
             required
             fullWidth
             name="password"
-            label="Password"
+            label="Пароль"
             type="password"
             id="password"
             autoComplete="current-password"
@@ -82,7 +82,7 @@ function LoginForm() {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            Sign In
+            Зарегистроваться
           </Button>
         </Box>
       </Box>

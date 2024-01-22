@@ -75,7 +75,7 @@ function RegisterForm() {
               required
               fullWidth
               id="first_name"
-              label="First Name"
+              label="Имя"
               name="first_name"
               value={first_name}
               onChange={(e) => setFirst_name(e.target.value)}
@@ -88,7 +88,7 @@ function RegisterForm() {
               required
               fullWidth
               id="last_name"
-              label="Last Name"
+              label="Фамилия"
               name="last_name"
               value={last_name}
               onChange={(e) => setLast_name(e.target.value)}
@@ -100,7 +100,7 @@ function RegisterForm() {
               required
               fullWidth
               id="username"
-              label="Username"
+              label="Имя пользователя"
               name="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -112,7 +112,7 @@ function RegisterForm() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Пароль"
               type="password"
               id="password"
               value={password}
@@ -125,7 +125,7 @@ function RegisterForm() {
               required
               fullWidth
               name="password2"
-              label="Password Confirmation"
+              label="Подтверждение пароля"
               type="password"
               id="password2"
               value={password2}
@@ -138,7 +138,7 @@ function RegisterForm() {
               required
               fullWidth
               name="about"
-              label="About"
+              label="Информация"
               id="about"
               value={about}
               onChange={(e) => setAbout(e.target.value)}
@@ -173,13 +173,13 @@ function RegisterForm() {
               <InputLabel id="gender">Gender</InputLabel>
               <Select
                 variant="outlined"
-                labelId="gender"
+                labelId="Пол"
                 required
                 fullWidth
                 name="gender"
                 id="gender"
                 value={gender}
-                label="Gender"
+                label="Пол"
                 onChange={(e) => setGender(e.target.value)}
               >
                 <MenuItem value={"Male"}>Male</MenuItem>

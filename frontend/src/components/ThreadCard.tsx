@@ -60,24 +60,24 @@ function ThreadCard({
           onClick={navigateToProfile}
           style={{ cursor: "pointer" }}
         >
-          <b>Last Replier: </b>
+          <b>Последним писал: </b>
           {thread.last_reply_poster_name != null
             ? thread.last_reply_poster_name
-            : "No posts yet!"}
+            : "Постов нет!"}
         </Typography>
         <Typography gutterBottom variant="h6" component="div">
           <p style={{ textAlign: "left", color: "gray" }}>
-            <b>Date: </b>
+            <b>Дата: </b>
             {thread.last_reply_date != null ? (
               <TimeAgo date={thread.last_reply_date} />
             ) : (
-              "No posts yet!"
+              "Постов нет!"
             )}
           </p>
         </Typography>
         <Typography gutterBottom variant="h6" component="div">
-          <b>Locked: </b>
-          {thread.is_locked ? "Yes" : "No"}
+          <b>Заблокирован: </b>
+          {thread.is_locked ? "Да" : "Нет"}
         </Typography>
       </CardContent>
       <CardActions>
@@ -85,11 +85,11 @@ function ThreadCard({
         (UserStore.user.is_administrator || UserStore.user.is_moderator) ? (
           thread.is_locked ? (
             <Button size="large" onClick={() => handleUnlock()}>
-              Unlock
+              Разблокировать
             </Button>
           ) : (
             <Button size="large" onClick={() => handleLock()}>
-              Lock
+              Заблокировать
             </Button>
           )
         ) : null}

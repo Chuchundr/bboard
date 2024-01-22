@@ -114,7 +114,7 @@ function PostList() {
     else
       return (
         <Typography color="inherit" justifyContent="center" display="flex">
-          No Posts Found
+          Постов не найдено!
         </Typography>
       );
   }
@@ -169,12 +169,12 @@ function PostList() {
                   required
                   fullWidth
                   id="message"
-                  label="Post Message"
+                  label="Сообщение"
                   name="message"
                   InputProps={{
                     endAdornment: (
                       <Button type="submit" variant="contained">
-                        Post
+                        Отправить
                       </Button>
                     ),
                   }}

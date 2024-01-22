@@ -17,11 +17,7 @@ class MyUserAdmin(UserAdmin):
                 "fields": (
                     "about",
                     "birth_date",
-                    "hometown",
-                    "present_location",
-                    "website",
                     "gender",
-                    "interests",
                     "avatar",
                     "is_moderator",
                     "is_administrator",

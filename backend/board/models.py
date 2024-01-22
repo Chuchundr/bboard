@@ -10,7 +10,7 @@ class User(AbstractUser):
     username = models.CharField('Имя пользователя', max_length=128)
     about = models.TextField()
     birth_date = models.DateField('Дата рождения', default=datetime.date.today)
-    GENDER_TYPES = (("Male", "Male"), ("Female", "Female"))
+    GENDER_TYPES = (("М", "М"), ("Ж", "Ж"))
     gender = models.CharField('Пол', max_length=64, choices=GENDER_TYPES)
     avatar = models.ImageField('Аватар', upload_to="users/%Y/%m/%d/", blank=True)
     is_moderator = models.BooleanField("Модератор", default=False)

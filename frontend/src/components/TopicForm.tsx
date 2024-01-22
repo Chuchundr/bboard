@@ -57,7 +57,7 @@ function TopicForm() {
               id="title"
               value={title}
               onChange={titleHandler}
-              label="Topic Title"
+              label="Название темы"
               required
               fullWidth
             />

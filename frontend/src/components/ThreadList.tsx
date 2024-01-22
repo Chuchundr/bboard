@@ -63,7 +63,7 @@ function ThreadsList() {
             display="flex"
             variant="h5"
           >
-            Sticky Threads
+            Sticky
           </Typography>
           <List
             sx={{
@@ -97,7 +97,7 @@ function ThreadsList() {
             display="flex"
             variant="h5"
           >
-            Non-Sticky Threads
+            Non-Sticky
           </Typography>
           <List
             sx={{
@@ -163,14 +163,14 @@ function ThreadsList() {
                   display="flex"
                   variant="h5"
                 >
-                  Create Thread
+                  Добавить тред
                 </Typography>
                 <TextField
                   margin="normal"
                   required
                   fullWidth
                   id="title"
-                  label="Thread Title"
+                  label="Название треда"
                   name="title"
                   inputProps={{ maxLength: 64 }}
                 />
@@ -185,7 +185,7 @@ function ThreadsList() {
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
                 >
-                  Create Thread
+                  Добавить
                 </Button>
               </Box>
             ) : null}

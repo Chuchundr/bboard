@@ -92,7 +92,7 @@ function BoardForm() {
         onClick={handleClickOpen}
         style={{ height: "35px", marginLeft: "5px", marginRight: "5px" }}
       >
-        Add Board
+        Добавить доску
       </Button>
       <Dialog
         open={open}
@@ -108,12 +108,12 @@ function BoardForm() {
               id="title"
               value={title}
               onChange={titleHandler}
-              label="Board Title"
+              label="Название доски"
               required
               fullWidth
             />
             <FormControl style={{ width: "200px" }}>
-              <InputLabel id="topic">Topic</InputLabel>
+              <InputLabel id="topic">Тема</InputLabel>
               <Select
                 labelId="topic"
                 id="topic"
@@ -133,11 +133,11 @@ function BoardForm() {
               id="description"
               value={description}
               onChange={descriptionHandler}
-              label="Board Description"
+              label="Описание доски"
               required
               fullWidth
             />
-            Picture:{" "}
+            Изображение:{" "}
             <input
               accept="image/*"
               name="image"
@@ -150,10 +150,10 @@ function BoardForm() {
         </DialogContent>
         <DialogActions>
           <Button form="add-board" type="submit" color="primary">
-            Add
+            Добавить
           </Button>
           <Button onClick={handleClose} color="primary">
-            Cancel
+            Отмена
           </Button>
         </DialogActions>
       </Dialog>
