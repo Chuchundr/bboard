@@ -36,21 +36,21 @@ function Header() {
           }}
         >
           <div className="text">
-            <b>Hello, {UserStore.user.username}!</b>
+            <b>Привет, {UserStore.user.username}!</b>
           </div>
           <div
             className="text"
             onClick={navigateToUserProfile}
             style={{ cursor: "pointer" }}
           >
-            <b>Profile</b>
+            <b>Профиль</b>
           </div>
           <div
             className="text"
             onClick={logUserOut}
             style={{ cursor: "pointer" }}
           >
-            <b>Logout</b>
+            <b>Выйти</b>
           </div>
         </div>
         <Avatar alt={UserStore.user.username} src={UserStore.user.avatar} />
@@ -68,14 +68,14 @@ function Header() {
             sx={{ my: 1, mx: 1.5 }}
             onClick={navigateToLogin}
           >
-            Login
+            Войти
           </Button>
           <Button
             variant="outlined"
             sx={{ my: 1, mx: 1.5 }}
             onClick={navigateToRegister}
           >
-            Register
+            Зарегистрироваться
           </Button>
         </React.Fragment>
       );
@@ -99,7 +99,7 @@ function Header() {
               fontWeight: "bold",
             }}
           >
-            Bulletin Board System
+            Доска объявлений
           </NavLink>
         </Typography>
         {loginHeader()}

@@ -18,11 +18,7 @@ class RegisterSerializer(serializers.ModelSerializer):
             "password2",
             "about",
             "birth_date",
-            "hometown",
-            "present_location",
-            "website",
             "gender",
-            "interests",
             "avatar",
         ]
 
@@ -45,12 +41,8 @@ class RegisterSerializer(serializers.ModelSerializer):
             password=validated_data["password"],
             about=validated_data["about"],
             birth_date=validated_data["birth_date"],
-            hometown=validated_data["hometown"],
-            present_location=validated_data["present_location"],
-            website=validated_data["website"],
             gender=validated_data["gender"],
-            interests=validated_data["interests"],
-            avatar=validated_data["avatar"],
+            avatar=validated_data.get("avatar"),
         )
         return user
 
@@ -81,11 +73,7 @@ class UserSerializer(serializers.ModelSerializer):
             "username",
             "about",
             "birth_date",
-            "hometown",
-            "present_location",
-            "website",
             "gender",
-            "interests",
             "avatar",
             "is_moderator",
             "is_administrator",
@@ -96,7 +84,7 @@ class UserSerializer(serializers.ModelSerializer):
 class TopicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Topic
-        fields = ["id", "title", "author"]
+        fields = ["id", "title"]
         extra_kwargs = {"author": {"required": False}}
 
     def create(self, validated_data):
@@ -143,7 +131,7 @@ class ThreadSerializer(serializers.ModelSerializer):
         if not len(post):
             return None
         post = post.latest("created_at")
-        return post.author
+        return post.author.username
 
     def get_last_reply_poster_name(self, obj):
         post = Post.objects.filter(thread__id=obj.id)
